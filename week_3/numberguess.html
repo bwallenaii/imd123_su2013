@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Guess the number</title>
+	<script type="text/javascript">
+		var randNum;
+		var guess;
+
+		randNum = Math.ceil(Math.random() * 10);
+		guess = prompt("Guess my number between 1 and 10");
+		guess = Number(guess); //maintain guess as a number
+
+		if(guess == randNum)
+		{
+			alert("Correct! You should be a computer!");
+		}
+		else if(guess < randNum)
+		{
+			alert("Sorry, you guessed lower than " + randNum);
+		}
+		else
+		{
+			alert("Sorry, you guessed higher than " + randNum);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

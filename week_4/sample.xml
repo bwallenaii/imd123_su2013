@@ -1,0 +1,14 @@
+<xml>
+	<person>
+		<firstName>Bob</firstName>
+		<lastName>Parker</lastName>
+		<weight>197</weight>
+		<age>27</age>
+	</person>
+	<person>
+		<firstName>Fred</firstName>
+		<lastName>Rogers</lastName>
+		<weight>202</weight>
+		<age>39</age>
+	</person>
+</xml>
