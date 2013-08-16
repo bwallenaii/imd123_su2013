@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Error catching with loops
+	</title>
+	<script>
+		/**
+		 * START
+		 *   Declare Number num1
+		 *   Declare Number num2
+		 * 
+		 *   
+		 *   while(num1 is not a Number OR num1 == 0)
+		 *     Output "Give me the first number"
+		 *     Input num1
+		 *   end while
+		 * 
+		 *   Output "Give me the second number"
+		 *   Input num2
+		 *   while(num2 is not a Number)
+		 *     Output "Give me the second number"
+		 *     Input num2
+		 *   end while
+		 * 
+		 *   Output num1 + num2
+		 * END
+		 */
+		 
+		 var num1;
+		 var num2;
+		 
+		 while(isNaN(num1) || num1 == 0)
+		 {
+		 	num1 = prompt("Give me the first number");
+		 	num1 = Number(num1); //translates string to number
+		 }
+		 
+		 num2 = prompt("Give me the second number");
+		 num2 = Number(num2); //translates string to number
+		 
+		 while(isNaN(num2))
+		 {
+		 	num2 = prompt("Give me the second number");
+		 	num2 = Number(num2); //translates string to number
+		 }
+		 
+		 alert(num1 + num2);
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

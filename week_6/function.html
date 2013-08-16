@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Untitled Document
+	</title>
+	<script>
+		function add(num1, num2)
+		{
+			num1 = Number(num1);
+			num2 = Number(num2);
+			
+			if(isNaN(num1) || isNaN(num2))
+			{
+				throw "One of your numbers weren't correct.";
+				return;
+			}
+			
+			return num1 + num2;
+		}
+	
+		var userNum1;
+		var userNum2;
+		var answer;
+		var worked = false;
+		
+		while(!worked)
+		{
+			userNum1 = prompt("Give me the first number");
+			userNum2 = prompt("Give me the second number");
+			
+			try
+			{
+				answer = add(userNum1, userNum2);
+				worked = true;
+			}
+			catch(e)
+			{
+				answer = "You needed to give me numbers.";
+			}
+			
+			alert(answer);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
