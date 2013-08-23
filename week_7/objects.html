@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Objects</title>
+	<script>
+		var donut = {}; //this is an object
+		var donuts = []; //this is an array
+		var orderDonut;
+		
+		orderDonut = confirm("Would you like to order a donut?"); //output and input together
+		while(orderDonut)
+		{
+			donut.type = prompt("What type of donut would you like?");
+			donut.sprinkles = confirm("Would you like sprinkles?");
+			donut.hasFilling = confirm("Would you like a filling?");
+			if(donut.hasFilling)
+			{
+				donut.filling = prompt("What filling would you like?");
+			}
+			
+			donuts.push(donut);
+			
+			donut = {}; //clears the object for next use -- don't worry about it
+			
+			orderDonut = confirm("Would you like to order another donut?"); 
+		}
+		
+		//save to disk: Write donuts to "donuts.txt"
+		console.log(donuts);
+	</script>
+</head>
+<body>
+	<script>
+		for(var i = 0; i < donuts.length;++i)
+		{
+			donut = donuts[i];
+			document.write("<div>");
+			document.write("<p>");
+			document.write("Type: " + donut.type);
+			document.write("</p>");
+			document.write("<p>");
+			document.write("Sprinkles: ");
+			if(donut.sprinkles)
+			{
+				document.write("yes");
+			}
+			else
+			{
+				document.write("no");
+			}
+			document.write("</p>");
+			if(donut.hasFilling)
+			{
+				document.write("<p>");
+				document.write("Filling: " + donut.filling);
+				document.write("</p>");
+			}
+			
+			document.write("</div>");
+		}
+	</script>
+</body>
+</html>
