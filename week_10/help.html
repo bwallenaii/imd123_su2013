@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>HELP!!!</title>
+    
+    <script>
+        function getCup()
+        {
+            var rand = Math.random() * 3;
+            rand = Math.ceil(rand);
+            return rand;
+        }
+        
+        function getGuess()
+        {
+            var guess;
+            
+            while(guess != 1 && guess != 2 && guess != 3)
+            {
+                guess = Number(prompt("Guess which cup the coin is under. 1, 2, or 3"));
+            }
+            return guess;
+        }
+    </script>
+</head>
+
+<body>
+Some help with the functions you need for the cup game.
+
+
+</body>
+</html>
